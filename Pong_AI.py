@@ -122,7 +122,7 @@ def test_ai(config):
     window = pygame.display.set_mode((width, height))
 
     with open("best.pickle", "rb") as f:
-        winner = pickle.load(winner, f)
+        winner = pickle.load(f)
 
     game = PongGame(window, width, height)
     game.test_ai(winner, config)
